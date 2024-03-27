@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn Variable</title>
+    <title>Learn Variable var, let and const</title>
   </head>
   <body>
     <script>
       // var adalah kata kunci lama dan tidak direkomendasikan
-      var fullName = "Abdurrohman Rifai"; //variable boleh di ubah2 tanpa batasan
-      var fullName = "Rifai Abdurrohman";
-      var shortName = "Rifai";
-      var firstName = "Abdurrohman";
-      var lastName = "Rifai Jr";
-      var parents = "Iskandar" + " and almh Sutriyah";
+      // membuat variable lebih direkomendasikan menggunakan let atau conts
+      // variable const tidak bisa di ubah
+      // let fullName = "Abdurrohman Rifai"; //var boleh di ubah2 tanpa batasan!
+      let fullName = "Rifai Abdurrohman";
+      fullName = "Abogoboga";
+      let shortName = "Rifai";
+      let firstName = "Abdurrohman";
+      let lastName = "Rifai Jr";
+      let parents = "Iskandar" + " and almh Sutriyah";
+      const version = "Belajar JavaScript Dasar";
+      // version = "Ga mau belajar";
 
       document.writeln("My name is " + fullName);
       document.writeln("<br>");
