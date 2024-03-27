@@ -7,15 +7,16 @@
   </head>
   <body>
     <script>
-      let result = 5 + 5;
+      let result = 5 + 5; //10
       document.writeln("<p> 5 + 5 = " + result + "</p>");
-      let originResult = result;
+      let originResult = result; //10
 
-      result = result - 4;
+      //augmented assignment
+      result -= 4; //result = result - 4
       document.writeln("<p>" + originResult + " - 4 = " + result + "</p>");
-      originResult = result;
+      originResult = result; //6
 
-      result *= 2;
+      result *= 2; //result = result * 4
       document.writeln("<p>" + originResult + " * 2 = " + result + "</p>");
       originResult = result;
     </script>
