@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <script>
+      const person = {};
+      // menambah atau mengubah
+      person["nama"] = "Abdurrohman Rifai";
+      person["negara"] = "Indonesia";
+      person["kampus"] = "Muhammadiyah University of Surakarta";
+      person["usia"] = 22;
+      person["hobi"] = "Coding";
+
+      console.table(person);
+      // menghapus
+      delete person["hobi"];
+
+      console.table(person);
+
+      // langsung
+      const personal = {
+        "nama lengkap": "Rifai Abdurrohman",
+        alamat: "Demak",
+        usia: 22,
+        sekolah: "SMAN 1 Indonesia",
+      };
+      console.table(personal);
+
+      // mengakses property object
+      document.writeln(`Nama: ${personal["nama lengkap"]}`);
+
+      console.info(`Nama: ${person.nama}`);
+      console.info(`Universitas: ${person.kampus}`);
+      console.info(`Alamat: ${personal.alamat}`);
+    </script>
+  </body>
+</html>
