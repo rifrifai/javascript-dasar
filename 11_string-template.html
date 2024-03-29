@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      // Menggunakan backtick `
+      const name = "Rifai Abdurrohman";
+      const template = `Full Name : ${name}`;
+      const firstName = "Rifai";
+      const middleName = "Abdur";
+      const lastName = "rohman";
+      const name2 = `Nama : ${firstName} ${middleName}${lastName}`;
+
+      console.info(template);
+      console.info(name2);
+
+      // Ekspression di string template
+      const nilai = 90;
+      const template2 = `Nama : ${name}, Lulus : ${nilai > 80}`;
+      console.info(template2);
+
+      // Multiline string
+      const multiline = `Halo my name is Rifai Abdurrohman,
+you can call me Rifai
+and I'm from Indonesia
+and I live in Salatiga`;
+
+      document.writeln("<pre>");
+      document.writeln(multiline);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>
