@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi str to int</title>
+  </head>
+  <body>
+    <script>
+      // menggunakan parseint utk ganti ke int
+      const value1 = parseInt("1");
+      const value2 = 1;
+      const sum = value1 + value2;
+      document.writeln(`<p> ${sum} </p>`);
+      document.writeln(`<p> ${parseInt("1.4")} </p>`);
+      document.writeln(`<p> ${parseFloat("1.4")} </p>`);
+      document.writeln(`<p> ${Number("1.8")} </p>`);
+
+      // to string
+      const a = 1;
+      const b = 2;
+      const total = a.toString() + b.toString();
+      document.writeln(`<p> ${total} </p>`);
+
+      // not a number
+      document.writeln(`<p> ${parseInt("String")} </p>`);
+
+      // mentolerin kesalahan ketika dibelakang
+      document.writeln(`<p> ${parseFloat("12.cekawalnya")} </p>`);
+
+      // number tidak mentolerin kesalahan
+      document.writeln(`<p> ${Number("12.cekawalnya")} </p>`);
+      document.writeln(`<p> ${Number("hehe.12")} </p>`);
+
+      // operasi NaN
+      const x = Number("12number");
+      const z = x + 1000;
+      document.writeln(`<p> ${z} </p>`);
+
+      // function isNan
+      document.writeln(`<p> ${isNaN(x)} </p>`);
+      document.writeln(`<p> ${isNaN(NaN)} </p>`);
+      document.writeln(`<p> ${isNaN(100)} </p>`);
+    </script>
+  </body>
+</html>
