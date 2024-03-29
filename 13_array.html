@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let arrayKosong = [];
+      let arrayNama = ["Rifai", "Abdurrohman", "Iskandar"];
+
+      arrayKosong.push("push");
+      arrayKosong.push("rifai", "qomar");
+      arrayKosong.push("alex", "farrell", 100, 10.5);
+
+      console.table(arrayKosong);
+      console.table(arrayNama);
+
+      // melihat isi array sesuai index
+      console.info(arrayKosong[4]);
+      // mengubah isi array
+      console.info((arrayKosong[4] = "zhafran"));
+      console.table(arrayKosong);
+
+      delete arrayKosong[3];
+      arrayKosong.push("tambah");
+      console.table(arrayKosong);
+
+      console.table((arrayKosong[3] = "ubah"));
+
+      // menambah array di dalam array
+      arrayNama.push(["Muhammad", "Faizal", "Rizqi", 14, 40]);
+      console.table(arrayNama);
+    </script>
+  </body>
+</html>
