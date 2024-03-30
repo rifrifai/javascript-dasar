@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Statement</title>
+  </head>
+  <body>
+    <script>
+      const value = "A";
+
+      switch (value) {
+        case "A":
+          document.writeln("<p>Nilai Anda Sangat Baik</p>");
+          break;
+        case "B":
+          document.writeln("Nilai Anda Baik");
+          break;
+        case "C":
+          document.writeln("Nilai Anda Cukup");
+          break;
+        case "D":
+        case "E":
+          document.writeln("Anda Kurang Belajar!");
+        default:
+          document.writeln("Anda Salah Jurusan!");
+      }
+
+      if (value === "A") {
+        document.writeln("Anda Lulus Terbaik!");
+      } else if (value === "B" || value === "C") {
+        document.writeln("Anda Lulus!");
+      } else if (value === "D") {
+        document.writeln("Anda Kurang Belajar!");
+      } else {
+        document.writeln("Anda Salah Jurusan!");
+      }
+    </script>
+  </body>
+</html>
