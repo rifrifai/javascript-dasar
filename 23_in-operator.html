@@ -8,6 +8,7 @@
   <body>
     <script>
       // in operator berfungsi utk mengecek apakah ada property itu di object tersebut
+      // dan in operator hanya mengecek apakah property/ index exist. so walaupun property nya null/ undefined maka property akan di anggap ada!
       let name = {
         firstName: "Rifai",
         middleName: "Abdurrohman",
@@ -21,6 +22,20 @@
         document.writeln(`Halo ${name.firstName}`);
       } else {
         document.writeln("Halo False");
+      }
+
+      // contoh undefined
+      const kota = {
+        A: "Demak",
+        B: "Jepara",
+        C: undefined,
+        D: "Bandung",
+      };
+
+      if ("C" in kota) {
+        alert(`Halo ${kota.C}`);
+      } else {
+        alert("Tidak ada diproperty kota!");
       }
     </script>
   </body>
