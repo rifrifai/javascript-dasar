@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Operator</title>
+  </head>
+  <body>
+    <script>
+      // in operator berfungsi utk mengecek apakah ada property itu di object tersebut
+      let name = {
+        firstName: "Rifai",
+        middleName: "Abdurrohman",
+        lastName: "Iskandar",
+      };
+
+      // const hasil = "salah" in name;
+      // document.writeln(`<p>${hasil}</p>`);
+
+      if ("firstName" in name) {
+        document.writeln(`Halo ${name.firstName}`);
+      } else {
+        document.writeln("Halo False");
+      }
+    </script>
+  </body>
+</html>
