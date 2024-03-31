@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falsy and Truthy</title>
+  </head>
+  <body>
+    <script>
+      // object kosong pun akan dianggap true
+      // anggota falsy: false, "", '', ``, 0, -0, NaN, Undefined, Null
+      let data;
+      if (data) {
+        document.writeln(`<p>Truthy</p>`);
+      } else {
+        document.writeln(`<p>Falsy</p>`);
+      }
+
+      let data2 = {} ? "Truthy" : "Falsy";
+      document.writeln(`<p>${data2}</p>`);
+    </script>
+  </body>
+</html>
