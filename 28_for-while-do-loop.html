@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loop</title>
+  </head>
+  <body>
+    <script>
+      // Infinite Loop
+      // for (;;) {
+      //   alert("For Loop");
+      // }
+
+      // for loop
+      for (let counter = 1; counter <= 5; counter++) {
+        document.writeln(`<p>Ini For Loop ke-${counter}</p>`);
+      }
+
+      // while loop
+      let i = 1;
+      while (i <= 5) {
+        document.writeln(`<p>Ini While Loop ke-${i}</p>`);
+        i++;
+      }
+
+      // do while loop => contoh menampilkan menu
+      let x = 1;
+      do {
+        document.writeln(`<p>Ini Do While Loop ke-${x}</p>`);
+        x++;
+      } while (x <= 5);
+    </script>
+  </body>
+</html>
