@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      // kalau OR/ || yang di ambil adalah truthy, kalau 2 2 nya truthny maka di ambil yang paling awal truthy, dan jika 2 2 falsy maka di ambil yang terakhir/ paling kanan
+      console.info("Hello" || "");
+      console.info("" || []);
+      console.info("0" || "NOL");
+      console.info(0 || "NOL");
+      console.info(null || "null");
+      console.info(undefined || "UNDEFINED");
+      console.info(-0 || false);
+
+      // contoh kecilnya seperti dibawah ini
+      const name = {
+        firstName: "",
+        lastName: "Abdurrohman",
+      };
+
+      console.info(name.firstName || name.lastName);
+
+      // contoh untuk yang AND/ &&, kalau AND ngambilnya yang falsy
+      console.info("Hello" && "");
+      console.info("" && []);
+      console.info("0" && "NOL");
+      console.info(0 && "NOL");
+      console.info(null && "null");
+      console.info(undefined && "UNDEFINED");
+      console.info(-0 && false);
+    </script>
+  </body>
+</html>
