@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break and Continue</title>
+  </head>
+  <body>
+    <script>
+      // contoh menggunakan break
+      let counter = 1;
+      while (true) {
+        document.writeln(`<p>Ini Perulangan ke-${counter}</p>`);
+        counter++;
+
+        if (counter > 10) {
+          break;
+        }
+      }
+
+      // contoh menggunakan continue
+      for (let i = 1; i <= 15; i++) {
+        if (i % 2 === 1) {
+          continue;
+        }
+
+        document.writeln(`<p>Ini Perulangan Continue ke-${i}</p>`);
+      }
+    </script>
+  </body>
+</html>
