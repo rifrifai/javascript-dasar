@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Statement</title>
+  </head>
+  <body>
+    <script>
+      // penggunakan with statement
+      const fullName = {
+        firstName: "Rifai",
+        middleName: "Abdurrohman",
+        lastName: "Iskandar",
+      };
+
+      // contoh manual
+      document.writeln(`<p>${fullName.firstName}</p>`);
+      document.writeln(`<p>${fullName.middleName}</p>`);
+      document.writeln(`<p>${fullName.lastName}</p>`);
+
+      // contoh with
+      with (fullName) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      // tetapi with statement tidak direkomendasikan, karena hal ini membuat code menjadi ambigu
+    </script>
+  </body>
+</html>
