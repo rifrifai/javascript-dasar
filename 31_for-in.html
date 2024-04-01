@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In</title>
+  </head>
+  <body>
+    <script>
+      // learn for in
+      const name = {
+        firstName: "Rifai",
+        middleName: "Abdurrohman",
+        lastName: "Iskandar",
+      };
+
+      // bisa menggunakan for (const properti in name){}
+      for (properti in name) {
+        document.writeln(`<p>${properti} : ${name[properti]}</p>`);
+      }
+    </script>
+  </body>
+</html>
