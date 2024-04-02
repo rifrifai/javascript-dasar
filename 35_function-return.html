@@ -14,6 +14,22 @@
 
       const result = sayHi("Marming", "Tyas");
       document.writeln(`<p>${result}</p>`);
+
+      // contoh dengan banyak return
+      function getValue(value) {
+        if (value >= 85) {
+          return "A";
+        } else if (value >= 75) {
+          return "B";
+        } else if (value >= 65) {
+          return "C";
+        } else {
+          return "D";
+        }
+      }
+
+      const finalValue = getValue(85);
+      document.writeln(`<p>Nilai Ujian Akhir Anda adalah ${finalValue}</p>`);
     </script>
   </body>
 </html>
