@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymous Function</title>
+  </head>
+  <body>
+    <script>
+      // membuat anonymous function harus lewat var atau parameter, tidak boleh berdiri sendiri seperti func biasa
+      // contoh dibuat di variable
+      const hi = function (name) {
+        document.writeln(`<p>Hi!, Apa Kabar ${name}?</p>`);
+      };
+
+      hi("Farrell");
+      hi("Tyas");
+
+      // contoh dibuat di parameter
+      function giveMeName(callback) {
+        callback("Diah");
+      }
+
+      giveMeName(function (name) {
+        document.writeln(`Hi ${name}!`);
+      });
+      giveMeName(hi);
+    </script>
+  </body>
+</html>
