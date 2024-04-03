@@ -33,17 +33,19 @@
       document.writeln(`<p>Nilai Ujian Akhir Anda adalah ${finalValue}</p>`);
 
       // contoh return digunakan untuk memberhentikan program
-      function isContains(array, searchValue) {
+      function isContain(array, searchValue) {
         for (const element of array) {
+          console.info(`Iterasi Element ${element}`);
           if (element === searchValue) {
             return true;
           }
         }
         return false;
       }
-      const array = [1, 2, 34, 545, 457, 76, 67, 89, 100];
-      const search = 10;
-      const found = isContains(array, search);
+
+      const array = [12, 13, 14, 345, 567, 778, 34, 23, 1];
+      const search = 12;
+      const found = isContain(array, search);
       document.writeln(`<p>${found}</p>`);
     </script>
   </body>
