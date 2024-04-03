@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter function</title>
+  </head>
+  <body>
+    <script>
+      // rest parameter digunakan untuk menambahkan data sebanyak nya pada satu parameter
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total ${name} berjumlah ${total}</p>`);
+      }
+
+      sum("Watermelon", 12, 20, 30, 40, 50, 60, 100);
+      sum("Durian", 200, 20, 30, 40, 50, 60, 100);
+      sum("Manggo", 300, 12, 13, 14, 15, 16);
+
+      // spread syntax => jadi langsung ditotalkan
+      const test = [10, 10, 10, 10, 10];
+      sum("Test", ...test);
+
+      // sekedar pengetahuan bahwasanya dulu sebelum ada rest parameter, developer menggunakan arguments, contoh
+      function oldSum() {
+        let total = 0;
+        for (const argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p>Total is ${total}</p>`);
+      }
+      oldSum(20, 20, 20, 20, 20);
+    </script>
+  </body>
+</html>
