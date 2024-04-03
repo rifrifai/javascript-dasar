@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global and Local Scope</title>
+  </head>
+  <body>
+    <script>
+      // global scope
+      let counter = 0;
+
+      // global scope
+      function hitMe() {
+        // local scope hitme()
+        counter++;
+      }
+
+      // global scope
+      function other() {
+        // local scope other
+      }
+
+      hitMe();
+      hitMe();
+
+      console.info(counter);
+
+      // contoh local scope
+      function first() {
+        let firstVar = "Variable First";
+        // console.info(secondVar); // ERROR
+
+        function firstNested() {
+          console.info(firstVar);
+          const firstNestedVariable = "Variable Nested";
+        }
+
+        firstNested();
+        // console.info(firstNestedVariable); // ERROR
+      }
+
+      function second() {
+        // contoh yang benar
+        let secondVar = "second";
+        console.info(secondVar);
+      }
+
+      first();
+      second();
+
+      // global scope
+      // console.info(firstVar); // ERROR
+      // console.info(secondVar); // ERROR
+    </script>
+  </body>
+</html>
