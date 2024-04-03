@@ -35,7 +35,7 @@
       // contoh return digunakan untuk memberhentikan program
       function isContain(array, searchValue) {
         for (const element of array) {
-          console.info(`Iterasi Element ${element}`);
+          document.writeln(`Iterasi Element ${element}`);
           if (element === searchValue) {
             return true;
           }
@@ -44,7 +44,7 @@
       }
 
       const array = [12, 13, 14, 345, 567, 778, 34, 23, 1];
-      const search = 12;
+      const search = 345;
       const found = isContain(array, search);
       document.writeln(`<p>${found}</p>`);
     </script>
