@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-      // parameter di JS ber default undefined
+      // parameter di JS ber default undefined => tapi kita bisa atur default value nya
       function sayName(firstName, middleName, lastName) {
         console.info(firstName);
         console.info(middleName);
@@ -19,6 +19,18 @@
       sayName("Rifai", "Abdurrohman");
       sayName("Rifai", "Abdurrohman", "Iskandar");
       sayName("Rifai", "Abdurrohman", "Iskandar", "Dzulkarnain");
+
+      // mengatur default value parameter sesuai keinginan kita
+      function biodata(name, gender = "unknown") {
+        console.info(name);
+        console.info(gender);
+      }
+
+      biodata("Rifai", "Male");
+      biodata("Diah", "Female");
+      biodata("Kafi");
+      biodata("Reza", undefined);
+      biodata("Maya", null);
     </script>
   </body>
 </html>
