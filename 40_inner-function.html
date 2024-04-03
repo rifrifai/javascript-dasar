@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inner Function</title>
+  </head>
+  <body>
+    <script>
+      // inner function adalah function didalam function, function didalam itu disebut inner function
+      // inner function hanya bisa berjalan didalam function itu sendiri/ parentnya
+
+      function outer() {
+        function inner() {
+          console.info("This is Inner");
+        }
+        inner();
+        inner();
+      }
+      outer();
+      // inner(); => error
+    </script>
+  </body>
+</html>
