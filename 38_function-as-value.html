@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function as Value</title>
+  </head>
+  <body>
+    <script>
+      // function bisa dimasukan ke dalam var atau parameter lainnya
+      function sayHi(name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      }
+
+      sayHi("Rifai");
+
+      const Hi = sayHi;
+      Hi("Abdurrohman");
+
+      function repeatHi(callback) {
+        callback("Diah"); // => sayHi("Diah")
+      }
+
+      repeatHi(Hi);
+      repeatHi(sayHi);
+    </script>
+  </body>
+</html>
