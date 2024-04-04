@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      // generator itu sifatnya lazy artinya jika kita belum ambil datanya dari generator, maka yield selanjutnya tidak akan di eksekusi
+      function* creatNames() {
+        yield "Rifai";
+        yield "Abdurrohman";
+        yield "Iskandar";
+        yield "Qomar";
+      }
+      const names = creatNames();
+      for (const name of names) {
+        console.info(name);
+      }
+
+      // menampilkan bilangan genap
+      // lazy
+      function* buatGenap(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 0) {
+            console.info(`yield-${i}`);
+            yield i;
+          }
+        }
+      }
+
+      // eager
+      function buatGenapArray(value) {
+        const result = [];
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 0) {
+            console.info(`yield-${i}`);
+            result.push(i);
+          }
+        }
+        return result;
+      }
+
+      const numbers = buatGenap(50);
+      // for (const number of numbers) {
+      //   console.info(number);
+      // }
+
+      // generator (lazy) diambil satu persatu
+      console.info(numbers.next().value);
+      console.info(numbers.next().value);
+      console.info(numbers.next().value);
+    </script>
+  </body>
+</html>
