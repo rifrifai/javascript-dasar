@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Method</title>
+  </head>
+  <body>
+    <script>
+      // pembuatan function didalam object, tentunya function sebagai value
+      function sayHello(name) {
+        alert(`Apa kabar ${name}?`);
+      }
+      const person = {
+        name: "Hilmi",
+        sayHi: sayHello,
+        // sayHi: function (name) {
+        //   alert(`Halo ${name}`);
+        // },
+      };
+
+      person.sayHi("Messi");
+    </script>
+  </body>
+</html>
