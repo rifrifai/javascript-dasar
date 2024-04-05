@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      // arrow function mirip dengan anonymous function, tidak bisa berdiri sendiri
+      // bisa tidak menggunakan block di arrow func
+      // contoh dengan block
+      // const sayHello = (name) => {
+      //   const hi = `Hallo apa kabar ${name}`;
+      //   console.info(hi);
+      // };
+
+      // contoh tidak dengan block
+      // bisa juga tidak menggunakan kurung di parameternya
+      // const sayHello = (name) => console.info(`Halo apa kabar ${name}?`);
+      const sayHello = (name) => console.info(`Hallo ${name}!`);
+      sayHello("Messi");
+
+      // menggunakan block bisa pake return, kalau tidak langsung jumlahkan saja
+      const sum = (pertama, kedua) => {
+        return pertama * kedua;
+      };
+      console.info(sum(10, 5));
+
+      // contoh return langsung karena tidak menggunakan block
+      const sum2 = (first, second) => first * second;
+      console.info(sum2(10, 10));
+
+      // contoh penggunaan arrow func di parameter
+      function giveMeName(callback) {
+        callback("Ronaldo");
+      }
+      // ini anonymous
+      // giveMeName(function (name) {
+      //   console.info(`Helo ${name}`);
+      // });
+
+      // ini arrow func
+      giveMeName((name) => console.info(`Apa kabar kamu ${name}`));
+    </script>
+  </body>
+</html>
