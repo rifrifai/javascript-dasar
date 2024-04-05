@@ -20,6 +20,17 @@
       };
 
       person.sayHi("Messi");
+
+      // menambahkan method ke object (functio ke object)
+      const person2 = {
+        names: "Marga Uzumaki",
+      };
+
+      person2.sayName = function (hehe) {
+        alert(`Kamu namanya ${hehe} ya?`);
+      };
+
+      person2.sayName("Farrell");
     </script>
   </body>
 </html>
