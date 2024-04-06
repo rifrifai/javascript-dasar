@@ -88,6 +88,30 @@
 
         console.info(sum([10, 10, 10]));
       }
+
+      {
+        // default value pada destructuring array
+        const names = ["Coboy"];
+        const [firstName, middleName = "Muh", lastName = "Dzulkarnain"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      {
+        // default value pada destructuring object
+        const person = {
+          firstName: "Iskandar",
+          middleName: "Ahmad",
+          lastName: "Haji",
+        };
+        const { firstName, middleName, lastName = "Default" } = person;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
     </script>
   </body>
 </html>
