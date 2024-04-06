@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      //  contoh pemanggilan array biasa
+      const santri = ["Diah", "Arum", "Marming"];
+      const firstSantri = santri[0];
+      const middleSantri = santri[1];
+      const lastSantri = santri[2];
+
+      console.info(firstSantri);
+      console.info(middleSantri);
+      console.info(santri[2]);
+
+      {
+        // contoh pemanggilan array menggunakan distructuring
+        const names = [
+          "Zhafran",
+          "Albani",
+          "Ramadianto",
+          "Miftachul",
+          "Azzam",
+          "Winata",
+        ];
+        let [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+      }
+
+      {
+        // contoh penggunaan distructuring di object method
+        const biodata = {
+          firstName: "Rifai",
+          lastName: "Abdurrohman",
+          address: {
+            desa: "Jungpasir",
+            kec: "Wedung",
+            kab: "Demak",
+          },
+          hobby: "Programming",
+          channel: "We Can Duwit",
+        };
+
+        const {
+          firstName,
+          lastName,
+          // contoh distructuring nested object
+          address: { desa, kec, kab },
+          hobby,
+          ...others
+        } = biodata;
+
+        console.info(firstName);
+        console.info(desa);
+        console.info(others);
+      }
+    </script>
+  </body>
+</html>
