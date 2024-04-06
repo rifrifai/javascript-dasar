@@ -112,6 +112,24 @@
         console.info(middleName);
         console.info(lastName);
       }
+
+      {
+        // menggunakan nama variable lain
+        const names = {
+          firstName: "Bayu",
+          lastName: "Ramadhan",
+        };
+
+        const {
+          firstName: namaDepan,
+          middleName: namaTengah = "Default",
+          lastName: namaAkhir,
+        } = names;
+
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaAkhir);
+      }
     </script>
   </body>
 </html>
