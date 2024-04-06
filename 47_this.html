@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata Kunci This</title>
+  </head>
+  <body>
+    <script>
+      console.info(this);
+
+      function sample() {
+        console.info(this);
+        function inner() {
+          console.info(this);
+        }
+        inner();
+      }
+      sample();
+
+      // contoh this diluar window
+      // this kalau di object method jadinya milik si object tersebut/ function (bukan milik window)
+      const sayName = function (name) {
+        console.info(`Hello ${name}, my name is ${this.name}`);
+      };
+
+      const person = {
+        name: "Reza",
+        sayHi: sayName,
+      };
+
+      person.sayHi("Zhafran");
+      person.sayHi("Rizqi");
+    </script>
+  </body>
+</html>
