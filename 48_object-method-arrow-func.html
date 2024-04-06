@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Method - Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      // arrow func di object tidak bisa digunakan untuk mengakses arguments object, func generator, this dan super. so pastikan gunakan arrow func hanya ketika tidak butuh fitur fitur di atas
+      const person = {
+        name: "Rizqi",
+        sayHi: (name) => {
+          // console.info(this); // masuknya ke window, bukan func nya
+          console.info(`Hello ${name}`);
+        },
+      };
+
+      person.sayHi("Joko");
+    </script>
+  </body>
+</html>
