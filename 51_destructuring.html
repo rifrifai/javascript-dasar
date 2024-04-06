@@ -62,6 +62,32 @@
         console.info(desa);
         console.info(others);
       }
+
+      {
+        // contoh destructuring pada parameter func
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: "Ahmad",
+          middleName: "Kurnia",
+          lastName: "Meiga",
+        };
+
+        displayPerson(person);
+      }
+
+      {
+        // contoh destructuring pada sum
+        function sum([first, second, third]) {
+          return first * second - third;
+        }
+
+        console.info(sum([10, 10, 10]));
+      }
     </script>
   </body>
 </html>
