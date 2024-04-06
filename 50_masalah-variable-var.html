@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masalah Variable Var</title>
+  </head>
+  <body>
+    <script>
+      // permasalahan dari nama var adalah karena tidak mempunya block, beda dengan let yang mempunyai block
+
+      // global scope
+      let i = 20;
+
+      // local scope
+      for (let i = 0; i <= 10; i++) {
+        console.info(`Ini Local Scope ke-${i}`);
+      }
+
+      console.info(`Ini Global ${i}`);
+    </script>
+  </body>
+</html>
